@@ -192,12 +192,3 @@ async def call_status_update(request: Request, customer_id: str):
 
 ## 1️⃣2️⃣ `data/customers_sample.csv`
 ```
-customer_id,name,phone,email,loan_amount,emi_amount,emi_due_date,last_payment_date,missed_payments,risk_score,status
-C001,Rahul Sharma,+919999991111,rahul@example.com,200000,5000,2026-03-13,2026-02-10,0,0.2,pending
-C002,Priya Singh,+919999992222,priya@example.com,150000,3000,2026-03-12,2026-02-05,1,0.5,pending
-C003,Amit Verma,+919999993333,amit@example.com,300000,4500,2026-03-20,2026-02-15,0,0.1,pending
-C004,Sunita Patel,+919999994444,sunita@example.com,100000,2500,2026-03-11,2026-01-20,2,0.8,overdue
-C005,Raj Kumar,+919999995555,raj@example.com,250000,6000,2026-03-14,2026-02-12,0,0.3,pending
-C006,Meena Gupta,+919999996666,meena@example.com,180000,4000,2026-03-13,2026-01-28,1,0.6,at_risk
-C007,Vikram Nair,+919999997777,vikram@example.com,220000,5500,2026-03-25,2026-02-18,0,0.15,pending
-C008,Deepa Joshi,+919999998888,deepa@example.com,130000,3200,2026-03-12,2026-01-15,3,0.9,high_risk
