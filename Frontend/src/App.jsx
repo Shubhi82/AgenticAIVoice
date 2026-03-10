@@ -36,3 +36,41 @@ export default function App() {
       </header>
 
       {/* Nav */}
+      <nav style={{
+        background: "#1e293b", borderBottom: "1px solid #334155",
+        padding: "0 32px", display: "flex", gap: 4
+      }}>
+        {TABS.map(tab => (
+          <button
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            style={{
+              background: activeTab === tab ? "#3b82f6" : "transparent",
+              border: "none", color: activeTab === tab ? "#fff" : "#94a3b8",
+              padding: "12px 20px", cursor: "pointer", borderRadius: "6px 6px 0 0",
+              fontWeight: activeTab === tab ? 600 : 400, fontSize: 14,
+              transition: "all 0.2s"
+            }}
+          >
+            {tab === "Dashboard"   && "📊 "}
+            {tab === "Customers"   && "👥 "}
+            {tab === "Call Logs"   && "📋 "}
+            {tab === "Upload Data" && "📁 "}
+            {tab === "Test Agent"  && "🎤 "}
+            {tab}
+          </button>
+        ))}
+      </nav>
+
+      {/* Content */}
+      <main style={{ padding: "28px 32px" }}>
+        {activeTab === "Dashboard"   && <Dashboard setTab={setActiveTab} />}
+        {activeTab === "Customers"   && <CustomerTable />}
+        {activeTab === "Call Logs"   && <CallLogs />}
+        {activeTab === "Upload Data" && <UploadData />}
+        {activeTab === "Test Agent"  && <VoiceTest />}
+      </main>
+
+    </div>
+  );
+}
