@@ -186,9 +186,3 @@ async def call_status_update(request: Request, customer_id: str):
         update_call_status(customer_id, "call_failed")
         log_call(customer_id, call_sid, "", "FAILED", "call_failed")
     return JSONResponse({"received": True})
-```
-
----
-
-## 1️⃣2️⃣ `data/customers_sample.csv`
-```
